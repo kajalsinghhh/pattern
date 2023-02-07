@@ -1,0 +1,80 @@
+import java.util.Scanner;
+public class Solution {
+    
+    public static void main(String[] args) {
+        // Write your code here
+        Scanner s= new Scanner(System.in);
+
+
+        int n= s.nextInt();
+        
+        
+        int p= 1;
+        int i=1;
+        if (n==0){
+            System.out.println("*"+"\n"+"*");
+            return;
+        }
+        while(i<=n+1){
+            int mid = (p+1)/2;
+            int j=1;
+            int num=1;
+            while(j<=p){
+                if (j==1 | j==p) {
+                    System.out.print("*");
+                }
+                else{
+                    if (j<mid) {
+                        System.out.print(num);
+                        num++;
+                    }
+                    else{
+                        System.out.print(num);
+                        num--;
+                    }
+                }
+                
+                j++;
+            }
+            System.out.println();
+            i=i+1;
+            p=p+2;
+
+        }
+        
+        
+        
+        int k = n;
+        p=p-4;
+        while(k>=1){
+            int j=1;
+            int mid = (p+1)/2;
+			 int num=1;
+            while(j<=p){
+                if (j==1 | j==p) {
+                    System.out.print("*");
+                }
+                else{
+                    if (j<mid) {
+                        System.out.print(num);
+                        num++;
+                    }
+                    else{
+                        System.out.print(num);
+                        num--;
+                    }
+                    
+                }
+                j++;
+            }
+            System.out.println();
+            k=k-1;
+            p=p-2;
+
+        }
+
+
+
+        
+    }
+}
