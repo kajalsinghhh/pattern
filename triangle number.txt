@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class Solution { //o1
+
+	public static void main(String[] args) { //o2
+		
+        Scanner s= new Scanner (System.in);
+        int n =s.nextInt();
+        int i= 1;
+        int p= 1;
+        while(i<=n){  //o3
+            int spaces=1;
+            while(spaces<=n-i){ //o4
+                System.out.print(' ');
+                spaces=spaces+1;
+                
+            } //c4
+            int num=1;
+            int j=1;
+            int k = i;
+            int half_p= (p-1)/2;
+            while(num<=p){ //o5
+                if (j<=half_p){
+                	System.out.print(k); 
+                    k=k+1;
+                    
+                }
+                else{
+                    
+                    System.out.print(k);
+                    k=k-1;
+                    
+                }
+                num=num+1;
+                j=j+1;
+            } //c5
+
+    public static void main(String args[]) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int i = 1;
+        while (i <= n) {
+            int spaces = 1;
+
+            while (spaces <= n - i) {
+
+                System.out.print(" ");
+                spaces = spaces + 1;
+            }
+            int num = 1;
+            while (num <= i) {
+                System.out.print(num);
+                num = num + 1;
+            }
+            int dec = i - 1;
+            while (dec >= 1) {
+                System.out.print(dec);
+                dec = dec - 1;
+            }
+            System.out.println();
+            i = i + 1;
+        }
+    }
+}
+
